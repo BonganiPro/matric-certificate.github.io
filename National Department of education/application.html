@@ -1,0 +1,251 @@
+﻿<!DOCTTYPE html>
+<html lang="en">
+
+	<head>
+		<title>	National Department of Education</title>
+		<link rel="shortcut icon" type="x-icon" href="icon.png">
+
+		<style>
+				*{
+					text-decoration: none;
+					font-family: Arial, Helvetica, sans-serif; font-size: 15px;
+
+				}
+				bod{
+					padding: 0; margin: 0; height: 100vh; justify-self: center; align-items: center; background: rgb(235, 232, 232);
+				}
+
+				.selection{
+					padding: 0; margin: 0; 
+				 display: flex; justify-self: center; align-items: center;
+				}
+				.slider{
+					width: 800px;
+					height: 500px;
+					border-radius: 10px;
+					overflow: hidden;
+				}
+				.slide{
+					width: 500px;
+					height: 500px;
+					display: flex;
+				}
+				.slide input{
+					display: none;
+				}
+				.st {
+					width: 20%;
+					transition: 2s;
+				}
+				.st img{
+					width: 800px;
+					height: 500px;
+				}
+				.nav-m{
+					position: absolute;
+					width: 700px;
+					margin-top: -40px;
+					justify-content: center;
+					display: flex;
+				}
+				.m-btn{
+					border: 2px solid rgb(252, 118, 30); padding: 5px; border-radius: 10px; cursor: pointer; transition: 1s;
+				}
+				.m-btn:not(:last-child){
+					margin-right: 30px;
+				}
+				.m-btn:hover{
+					background-color: rgb(252, 118, 30);
+				}
+				#radio1:checked~.first{
+					margin: 0;
+				}
+				#radio2:checked~.first{
+					margin: -20%;
+				}
+				#radio3:checked~.first{
+					margin: -40%;
+				}
+				#radio4:checked~.first{
+					margin: -60%;
+				}
+				.nav-auto{
+					position: absolute;
+					width: 800px;
+					margin-top: 460px;
+					display: flex;
+					justify-content: center;
+				}
+				.nav-auto div{
+					border: 2px solid rgb(252, 118, 30);
+					padding: 5px;
+					border: 10px;
+					transition: 1s;
+				}
+				.nav-auto div:not(:last-child){
+					margin: 30px;
+					justify-content: center;
+				}
+				#radio1:checked~.nav-auto .a-b1{
+					background-color: rgb(252, 118, 30);
+				}
+				#radio2:checked~.nav-auto .a-b2{
+					background-color: rgb(252, 118, 30);
+				}
+				#radio3:checked~.nav-auto .a-b3{
+					background-color: rgb(252, 118, 30);
+				}
+				#radio4:checked~.nav-auto .a-b4{
+					background-color: rgb(252, 118, 30);
+				}
+
+
+
+
+
+
+				a{
+					color: rgb(252, 118, 30);
+					font-weight: bold;
+				}
+				.navbar{
+					background: black; font-family: Arial, Helvetica, sans-serif; padding-left: 30px; padding-right: 30px; 
+					border-top-left-radius: 45px; margin-left: 50px;
+				}
+				.navdiv{
+					display: flex; align-items: center; justify-content: space-between;  
+				}
+				li{
+					list-style: none; color: white;
+				}
+				.intro{
+					width: 75%;
+				}
+				.top{
+					font-size: 30px;
+				}
+				.container{
+					margin-left: 6%; margin-right: 6%;
+					background: white;
+				}
+				body{
+					background: rgb(224, 221, 221);
+				}
+				.mbg{
+					background: rgb(252, 118, 30);
+				}
+				.home{
+					font-family: serif;
+					font-size: 29px;
+				}
+	
+				button{
+					background: rgb(252, 118, 30); margin-left: 10px; border-radius: 10px; padding: 10px; width: auto; 
+				}
+				button a{
+					color: white; font-size: 15px; font-weight: bold;
+                }
+                .area{
+                    margin: 0;
+                    padding: 0;
+                    width: 300px;
+                    height: 200px;
+                }
+		</style>
+	</head>
+	<body>
+	<div class="container">
+		<image class="srch" src="854c68ead45a2d0fcffbb922ef6dee5a.png" alt="search" width="2%">
+		<image src="dbeLogo2.png" alt="logo" width="100%">
+			<div class="mbg">
+                <nav class="navbar">
+                    <div class="navdiv">
+                         <ul>
+                             <li><a class="home" href="index.html"> <B><<</B> HOME</a></li>
+                        </ul>
+                       
+                    </div>
+                </nav>
+            </div>
+            <image src="ExamCount2023.jpg" alt="logo" width="75%">
+                <div class="top">APPLICATION FOR MATRIC CERTIFICATE</div>
+<form>
+    <table>
+        <tr>
+            <td>
+                Name As Appeared On ID:
+            </td>
+            <td>
+                <input type="text" placeholder="Name" name="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Surname As Appeared On ID :
+            </td>
+            <td>
+                <input type="text" placeholder="Surname" name="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ID Number:
+            </td>
+            <td>
+                <input type="text" placeholder="ID No." name="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Gender:
+            </td>
+            <td>
+                <input type="radio" name="Gender">Male
+                <input type="radio" name="Gender">Female
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Province:
+            </td>
+            <td>
+                <input type="radio" name="Province">Limpopo
+                <input type="radio" name="Province">Mpumalanga
+                <input type="radio" name="Province">Gauteng
+                <input type="radio" name="Province">Kwazulu National
+                <input type="radio" name="Province">Free State
+                <input type="radio" name="Province">North West
+                <input type="radio" name="Province">Eastern Cape
+                <input type="radio" name="Province">Western Cape
+                <input type="radio" name="Province">Northern Cape
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                School Attended:
+            </td>
+            <td>
+                <input type="text" placeholder="School" name="">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Subjects:
+            </td>
+            <td>
+                <input class="area" type="textarea" placeholder="Type here" name="">
+            </td>
+        </tr>
+    
+    </table>
+</form>
+
+
+
+<button><a href="submitted.html">Submit</a></button>
+	
+	</div>
+
+	</body>
+</html>
